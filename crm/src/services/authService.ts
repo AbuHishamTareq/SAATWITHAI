@@ -1,5 +1,11 @@
 import api from './api';
 import { TOKEN_KEY } from '../constants';
+import type { AdminUser, ApiResponse } from '../types';
+
+interface LoginResponse {
+  token: string;
+  user: AdminUser;
+}
 
 /**
  * Admin authentication service.
@@ -7,12 +13,12 @@ import { TOKEN_KEY } from '../constants';
 export const authService = {
   /**
    * Login with email and password.
-   * @param {string} email
-   * @param {string} password
-   * @returns {Promise<{token: string, user: object}>}
    */
-  async login(email, password) {
-    const response = await api.post('/admin/login', { email, password });
+  async login(email: string, password: string): Promise<LoginResponse> {
+    const response = await api.post<ApiResponse<LoginResponse>>('/admin/login', {
+      email,
+      password,
+    });
     const { token, user } = response.data.data;
     localStorage.setItem(TOKEN_KEY, token);
     return { token, user };
@@ -21,7 +27,7 @@ export const authService = {
   /**
    * Logout and clear stored token.
    */
-  async logout() {
+  async logout(): Promise<void> {
     try {
       await api.post('/admin/logout');
     } finally {
@@ -31,18 +37,16 @@ export const authService = {
 
   /**
    * Get the currently authenticated admin user.
-   * @returns {Promise<object>}
    */
-  async getMe() {
-    const response = await api.get('/admin/me');
+  async getMe(): Promise<AdminUser> {
+    const response = await api.get<ApiResponse<AdminUser>>('/admin/me');
     return response.data.data;
   },
 
   /**
    * Check if admin is authenticated.
-   * @returns {boolean}
    */
-  isAuthenticated() {
+  isAuthenticated(): boolean {
     return !!localStorage.getItem(TOKEN_KEY);
   },
 };

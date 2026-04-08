@@ -9,7 +9,13 @@ import {
   BarChart3,
 } from 'lucide-react';
 
-const navItems = [
+interface NavItem {
+  to: string;
+  icon: typeof LayoutDashboard;
+  label: string;
+}
+
+const navItems: NavItem[] = [
   { to: '/', icon: LayoutDashboard, label: 'Dashboard' },
   { to: '/users', icon: Users, label: 'Users' },
   { to: '/providers', icon: Briefcase, label: 'Providers' },

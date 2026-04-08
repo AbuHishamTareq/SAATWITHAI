@@ -1,10 +1,14 @@
 import Sidebar from './Sidebar';
 import Header from './Header';
 
+interface AdminLayoutProps {
+  children: React.ReactNode;
+}
+
 /**
  * Main admin layout with sidebar and header.
  */
-export default function AdminLayout({ children }) {
+export default function AdminLayout({ children }: AdminLayoutProps) {
   return (
     <div className="flex min-h-screen bg-gray-50">
       <Sidebar />

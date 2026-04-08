@@ -1,17 +1,14 @@
-import { useEffect } from "react";
-import { RouterProvider } from "react-router-dom";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import * as Sentry from "@sentry/react";
-import { router } from "./routes";
-import { AuthProvider, useAuth } from "./hooks/useAuth.jsx";
+import { useEffect, type ReactNode } from 'react';
+import { RouterProvider } from 'react-router-dom';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import * as Sentry from '@sentry/react';
+import { router } from './routes';
+import { AuthProvider, useAuth } from './hooks/useAuth';
 
 // Initialize Sentry
 Sentry.init({
   dsn: import.meta.env.VITE_SENTRY_DSN,
-  integrations: [
-    Sentry.browserTracingIntegration(),
-    Sentry.replayIntegration(),
-  ],
+  integrations: [Sentry.browserTracingIntegration(), Sentry.replayIntegration()],
   tracesSampleRate: 1.0,
   replaysSessionSampleRate: 0.1,
   replaysOnErrorSampleRate: 1.0,
@@ -30,7 +27,7 @@ const queryClient = new QueryClient({
 /**
  * Auth initializer — checks auth status on app mount.
  */
-function AuthInitializer({ children }) {
+function AuthInitializer({ children }: { children: ReactNode }) {
   const { checkAuth } = useAuth();
 
   useEffect(() => {
