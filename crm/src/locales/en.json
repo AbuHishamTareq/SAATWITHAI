@@ -1,0 +1,67 @@
+{
+  "common": {
+    "appName": "SAAT",
+    "crmSystem": "CRM System",
+    "platform": "Service Management Platform",
+    "signIn": "Sign In",
+    "signingIn": "Signing in...",
+    "logout": "Logout",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Retry",
+    "success": "Success",
+    "failed": "Failed"
+  },
+  "auth": {
+    "welcomeBack": "Welcome Back",
+    "signInSubtitle": "Sign in to your SAAT CRM account",
+    "email": "Email",
+    "emailPlaceholder": "Enter your email",
+    "password": "Password",
+    "passwordPlaceholder": "Enter your password",
+    "rememberMe": "Remember me",
+    "forgotPassword": "Forgot password?",
+    "invalidCredentials": "Invalid email or password",
+    "demoTitle": "Quick login with demo credentials",
+    "useDemoAccount": "Use demo account"
+  },
+  "forgotPassword": {
+    "title": "Forgot Password",
+    "subtitle": "Enter your email and we'll send you a reset link",
+    "sendResetLink": "Send Reset Link",
+    "sending": "Sending...",
+    "checkEmail": "Check your email",
+    "resetLinkSent": "We've sent a password reset link to",
+    "backToLogin": "Back to login",
+    "sendError": "Failed to send reset link. Please try again."
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "users": "Users",
+    "providers": "Providers",
+    "services": "Services",
+    "bookings": "Bookings",
+    "payments": "Payments",
+    "reports": "Reports"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "totalUsers": "Total Users",
+    "totalProviders": "Total Providers",
+    "totalBookings": "Total Bookings",
+    "totalRevenue": "Total Revenue",
+    "bookingsThisWeek": "Bookings This Week",
+    "revenueThisWeek": "Revenue This Week"
+  },
+  "lang": {
+    "english": "English",
+    "arabic": "العربية"
+  },
+  "footer": {
+    "copyright": "© 2025 Mehan. All rights reserved."
+  }
+}
