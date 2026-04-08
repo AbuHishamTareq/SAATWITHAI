@@ -1,0 +1,1 @@
+I want to build a service-booking app, that customer can use to book a service from a provider. The app should be able to handle multiple services, and allow the customer to book a service at a sp

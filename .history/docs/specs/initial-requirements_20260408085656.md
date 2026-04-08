@@ -1,0 +1,33 @@
+I want to build a service-booking app, that customer can use to book a service from a provider. The app should be able to handle multiple services, and allow the customer to book a service at a spacific date and time. The app should also be able to handle payment for the service.
+
+The app should be build with Flutter 
+
+## User Stories
+
+### As a customer, I want to be able to book a service from a provider.
+
+### As a provider, I want to be able to create a service.
+
+### As a provider, I want to be able to update a service.
+
+### As a provider, I want to be able to delete a service.
+
+### As a customer, I want to be able to view a list of available services.
+
+### As a customer, I want to be able to view the details of a service.
+
+### As a customer, I want to be able to book a service at a specific date and time.
+
+## Requirements
+
+### User Authentication
+
+* The app should allow users to create an account and log in.
+* The app should allow users to reset their password.
+* The app should allow users to log out.
+
+### Service Management
+
+* The app should allow providers to create a service.
+* The app should allow providers to update a service.
+* The app should allow providers to delete a service.
